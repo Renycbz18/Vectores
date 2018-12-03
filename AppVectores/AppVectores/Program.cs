@@ -44,7 +44,7 @@ namespace AppVectores
             Console.WriteLine("SUMATORIA ES {0}", suma);
             Console.WriteLine("PROMEDIO ES {0}", (double)suma / x.Length);
 
-
+            ///////
 
         }
     }
