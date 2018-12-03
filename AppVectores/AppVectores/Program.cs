@@ -34,6 +34,18 @@ namespace AppVectores
                 Console.WriteLine("ELEMENTO INDICE {0} --> {1}", (i + 1), x[i]);
             }
 
+            //SUMATORIA DE LOS VECTORES
+            int suma = 0;
+            for (int i=0; i < x.Length;i++)
+            {
+                suma = suma + x[i];
+            }
+
+            Console.WriteLine("SUMATORIA ES {0}", suma);
+            Console.WriteLine("PROMEDIO ES {0}", (double)suma / x.Length);
+
+
+
         }
     }
 }
