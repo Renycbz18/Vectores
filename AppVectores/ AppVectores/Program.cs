@@ -22,7 +22,11 @@ namespace AppVectores
                 Console.WriteLine("Error:" + ex.Message.ToString());
             }
             Console.WriteLine("2 elevaddo a la 5 es igual a: {0}", Potencia(2, 5));
-            Console.ReadKey();
+            Nombres(nombres);
+	    NombresOrde(nombres);
+            NombreInprem(nombres);
+		
+		Console.ReadKey();
         }
 
         
@@ -104,10 +108,40 @@ namespace AppVectores
             Console.WriteLine("NUMERO MAYOR: " + mayor);
             Console.WriteLine("NUMERO MENOR: " + menor);
         }
+	public static void NombresOrde(string[] x)
+		{
+			string aux = "";
+			for (int i = 0; i < x.Length; i++)
+			{
+				for (int j = i; j < x.Length; j++)
+				{
+					if (String.Compare(x[i], x[j], StringComparison.Ordinal) > 0)
+					{
+						aux = x[i];
+						x[i] = x[j];
+						x[j] = aux;
+					}
+				}
+			}
+		}
 
+		public static void NombreInprem(string[] x)
+		{
+			foreach (string num in x)
+			{
+				Console.WriteLine("\nNombres Ordenados: {0}", num);
 
-		
-    }
+ }
+
+		public static void Nombres(string[] x)
+		{
+			for (int i = 0; i < MAX; i++)
+			{
+				Console.WriteLine("\nColoque los nombres : {0}: ", i + 1);
+				x[i] = Console.ReadLine();
+
+			}
+		}
 
 
 
